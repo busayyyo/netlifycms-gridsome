@@ -1,84 +1,38 @@
 ---
-title: Say hello to Gridsome 🎉
-date: 2019-02-07
+title: Life and the quest for meaning ✨
+date: 2019-12-31T23:00:00.000Z
 published: true
-tags: ['Markdown', 'Releases']
-description: "A new static site generator baby is born. It's highly inspired by Gatsby.js (React based) but built on top of Vue.js. We have been working on it for a year and will have a beta ready soon. You can expect this baby to grow up fast!"
-
+tags:
+  - Musings
+  - Book
+description: Man’s search for meaning is a psychological memoir of a prisoner of
+  war. It’s an attempt to make sense of the suffering witnessed and endured at
+  the concentration camp. But even Dr. Frankl couldn’t accurately do justice to
+  that. There was no sense in the killings, the starvation, the torture and many
+  unimaginable things that went on at Auschwitz and other internment camps.
 ---
+My disposition to life has always leaned towards that of existential nihilism — a school of thought that proposes that life has no intrinsic meaning or value. However, of recent, I’ve been on a path to find meaning, to make sense of the meaninglessness. This is what led me to Viktor Frankl’s book ‘Man’s search for meaning’.
 
-A new static site generator baby is born. It's highly inspired by Gatsby.js (React based) but built on top of Vue.js. We have been working on it for a year and will have a beta ready soon. You can expect this baby to grow up fast!
+## Dr. Frankl and his approach to meaning
 
-We think **Gridsome** is a missing piece to the Vue.js ecosystem. What Gatsby.js does for React.js is a game changer in how we build websites.  React.js is excellent, but we think Vue.js is more approachable for most web designers and devs getting started with JAMstack. Gridsome is the Vue.js alternative to Gatsby.
+Viktor Frankl was an Austrian neurologist and psychiatrist who spent 3 years at different concentration camps during the second world war, including Auschwitz. If there was anyone who understood suffering and its effect on peoples’ psyche, it was Dr. Frankl.
 
-With **Gridsome** you get a **universal GraphQL layer** for all your connected data sources. It's like a single source of truth for your website data ready to be used in any page or components. Connect to any CMS or APIs like Google Spreadsheet, Airtable, Instagram Feed, local markdown files, etc. 
+Man’s search for meaning is a psychological memoir of a prisoner of war. It’s an attempt to make sense of the suffering witnessed and endured at the concentration camp. But even Dr. Frankl couldn’t accurately do justice to that. There was no sense in the killings, the starvation, the torture and many unimaginable things that went on at Auschwitz and other internment camps.
 
-Here is an example on how to query posts from the GraphQL layer in a page:
+If there was any meaning to be found at all (whether in general life or in the harshest of sufferings such as the concentration camp), Dr. Frankl proposes it is an individual and a moment-to-moment one. There’s no singular universal and collective meaning for us all. Meaning is unique to individuals and their situations, and it behooves on them to find out what it is.
 
+This individualistic approach to meaning is the central theme of this book. The idea that one could choose their response to whatever life deals them and could choose to find meaning in it, even a fate as fatal as that of a war prisoner. As Dr. Frankl solemnly surmised: “everything can be taken from a man but one thing: the last of the human freedoms — to choose one’s attitude in any given set of circumstances, to choose one’s own way.”
 
-```html
-<template>
-  <Layout>
-    <h2>Latest blog posts</h2>
-    <ul>
-      <li v-for="edge in $page.allWordPressPost.edges" :key="edge.node.id">
-        {{ edge.node.title }}
-      </li>
-    </ul>
-  </Layout>
-</template>
+## How to go about finding meaning
 
-<page-query>
-query Blog {
-  allWordPressPost (limit: 5) {
-    edges {
-      node {
-        _id
-        title
-      }
-    }
-  }
-}
-</page-query>
-```
+So how does one go about finding these highly individualistic meanings? Dr. Frankl posited that there are 3 ways:
 
-You don't need to know GraphQL or Vue to get started with Gridsome - It's a great way to get introduced to both.
+**Meaning through work:** Through creative work and deeds, one could find meaning. After all, the thought of completing his manuscript — his life’s work, had kept Dr. Frankl alive in prison. If we do something we care about, it can keep us grounded and give us meaning.
 
+**Meaning through love:** The second way to find meaning is by experiencing or encountering someone. Love, as the book describes it, “is the only way to grasp another human being in the innermost core of his personality.” This act of love opens us up in ways unimaginable and the book argues that love has the potential to actualize people, both the lover and the beloved.
 
-The GraphQL layer and all the data can be explored in a local GraphQL playground. The playground is usually located at `https://localhost:8080/___explore` when a Gridsome development project is running.
+**Meaning through suffering:** The third and final way one could find meaning is by suffering with dignity. Although this book insisted that suffering is not a necessity to meaning, it, however, asserts that meaning could be found in spite of suffering. When confronted with pain, fear, and death one could turn the hopelessness around by finding meaning in the sacrifice. As Dr. Frankl pointed out, “in some ways suffering ceases to be suffering at the moment it finds a meaning, such as the meaning of a sacrifice.”
 
+## Back to existential nihilism
 
-
-
-#### Perfect scores on Google Lighthouse - automagically 💚
-
-One of the main goals of Gridsome is to make a framework that let you build websites that are optimized "out-of-the-box." It follows the [PRPL-pattern by Google.](https://developers.google.com/web/fundamentals/performance/prpl-pattern/) You don't need to be a performance expert to make fast websites with Gridsome. Your site gets almost perfect scores on Google lighthouse out-of-the-box. These are some of the performance steps that Gridsome takes care of:
-
-- Image compressing & lazy-loading ⚡️ 
-- CSS & JS minification ⚡️ 
-- Code-splitting ⚡️ 
-- HTML compressing ⚡️ 
-- Critical CSS (Plugin) ⚡️ 
-- Full PWA & Offline-support (plugin) ⚡️  
-
-
-#### A better way to build websites
-
-Gridsome is built for the JAMstack workflow - a new way to build websites that gives you better performance, higher security, cheaper hosting, and a better developer experience. Generate prerendered (static) pages at build time for SEO-purpose and add powerful dynamic functionality with APIs and Vue.js.
-
-We believe the SSGs / JAMstack trend is just getting started. When you have first started to make websites this way there is no way back. You feel almost "dirty" when going back to a traditional WordPress / CMS setup. 
-
-Try running the new Chrome Lighthouse (Audit tab in Developer tools) on a WordPress site - It is impossible to get good scores even with the best caching plugins and hosting. With Gridsome you don't even need caching plugins. Website optimization is taken care of at build time.
-
-This is what we think is very exciting and is why we are building Gridsome. It is the **perfect SPA & PWA front-end solution** for any headless CMS or content APIs.
-
-
-#### Whats next
-
-In the next couple of months we're going to continue to improve the docs, create tutorials, add more source & transformer plugins and fix bugs. 
-
-#### Contribute to Gridsome
-
-We're currently just two brothers working on this, so any contribution is very welcome. We're passionate about building a faster web and make website building fun again.
-
-You can also support us by giving [a GitHub star ★](https://github.com/gridsome/gridsome/stargazers) and spread the word :)
+Now, if these, especially the last bit of finding meaning through suffering seems a bit too feel-good to be realistic, that’s because it is. Viktor Frankl himself tagged it as ‘tragic optimism’ — the idea that life holds any meaning in spite of death, pain, and guilt. But what Viktor Frankl seems to wager is this: man is capable of creating optimism even in the direst of condition, and if he is, then he is capable of also creating meaning. Because God knows, what else is there?
