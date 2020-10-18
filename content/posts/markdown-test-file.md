@@ -1,285 +1,98 @@
 ---
-title: Markdown test file
-date: 2019-02-06
+title: A designer's guide to git
+date: 2020-01-15T23:00:00.000Z
 published: true
-tags: ['Markdown','Test files']
+tags:
+  - Helpful
+  - Dev
 canonical_url: false
-description: "Markdown is intended to be as easy-to-read and easy-to-write as is feasible. Readability, however, is emphasized above all else. A Markdown-formatted document should be publishable as-is, as plain text, without looking like it's been marked up with tags or formatting instructions."
+description: Markdown is intended to be as easy-to-read and easy-to-write as is
+  feasible. Readability, however, is emphasized above all else. A
+  Markdown-formatted document should be publishable as-is, as plain text,
+  without looking like it's been marked up with tags or formatting instructions.
 ---
 
-Markdown is intended to be as easy-to-read and easy-to-write as is feasible.Readability, however, is emphasized above all else. A Markdown-formatted
-document should be publishable as-is, as plain text, without looking
-like it's been marked up with tags or formatting instructions.
 
-While Markdown's syntax has been influenced by several existing text-to-HTML
-filters -- including [Setext](http://docutils.sourceforge.net/mirror/setext.html), [atx](http://www.aaronsw.com/2002/atx/), [Textile](http://textism.com/tools/textile/), [reStructuredText](http://docutils.sourceforge.net/rst.html),
-[Grutatext](http://www.triptico.com/software/grutatxt.html), and [EtText](http://ettext.taint.org/doc/) -- the single biggest source of
-inspiration for Markdown's syntax is the format of plain text email.
+There have been so many debates on whether a designer should learn how to code - this is not one of them. However, there are many times within a team, that a designer may be required to provide developers assets they need or maybe even write a snippet of CSS. As digital teams get more diverse and roles overlap, working collaboratively becomes essential. One tool that makes this collaborative experience run smoothly is git. Learning how to use git efficiently can be a distinctive skill that will improve your efficiency and relationships with the developers on your team. And you don’t even need to know everything about git to get to this level of efficiency.
 
-## Block Elements
+## A little note on git
 
-### Paragraphs and Line Breaks
+Git is a version control system that basically keeps track of all the changes you or your teammates make to a file (in this case, your team’s code repository). It helps you write code safely knowing you can keep track of changes and even undo them in the event of a code mishap. Imagine if you didn’t have Ctrl-Z, how horrible would writing a text file be? But unlike most text document management tool, Git keeps track of all the timeline of your writing as long as you commit. If there’s any takeaway you get from this article let it be this - *Remember to always commit your changes!*
 
-A paragraph is simply one or more consecutive lines of text, separated
-by one or more blank lines. (A blank line is any line that looks like a
-blank line -- a line containing nothing but spaces or tabs is considered
-blank.) Normal paragraphs should not be indented with spaces or tabs.
+But let’s see what a likely scenario where a designer may get to use git is.
 
-The implication of the "one or more consecutive lines of text" rule is
-that Markdown supports "hard-wrapped" text paragraphs. This differs
-significantly from most other text-to-HTML formatters (including Movable
-Type's "Convert Line Breaks" option) which translate every line break
-character in a paragraph into a `<br />` tag.
+## A likely scenario
 
-When you *do* want to insert a `<br />` break tag using Markdown, you
-end a line with two or more spaces, then type return.
+Imagine there’s a part of your company’s web app you’ve recently redesigned to improve usability. It’s an important change, something that will save the customer support folks a few calls, but the developers are busy with the sprint and can’t spare the time. You, on the other hand, can manage the change since you are a CSS guru and a designer who knows the implication if the change doesn’t go out with the next release. You get a go-ahead from the product and engineering managers, who say ‘go make the change!’ How do you make these changes and work collaboratively with your teammates without messing things up for anyone involved?
 
-### Headers
+Here’s how:
 
-Markdown supports two styles of headers, [Setext] [1] and [atx] [2].
-
-Optionally, you may "close" atx-style headers. This is purely
-cosmetic -- you can use this if you think it looks better. The
-closing hashes don't even need to match the number of hashes
-used to open the header. (The number of opening hashes
-determines the header level.)
-
-### Blockquotes
-
-Markdown uses email-style `>` characters for blockquoting. If you're
-familiar with quoting passages of text in an email message, then you
-know how to create a blockquote in Markdown. It looks best if you hard
-wrap the text and put a `>` before every line:
-
-> This is a blockquote with two paragraphs. Lorem ipsum dolor sit amet,
-> consectetuer adipiscing elit. Aliquam hendrerit mi posuere lectus.
-> Vestibulum enim wisi, viverra nec, fringilla in, laoreet vitae, risus.
-> 
-> Donec sit amet nisl. Aliquam semper ipsum sit amet velit. Suspendisse
-> id sem consectetuer libero luctus adipiscing.
-
-Markdown allows you to be lazy and only put the `>` before the first
-line of a hard-wrapped paragraph:
-
-> This is a blockquote with two paragraphs. Lorem ipsum dolor sit amet,
-consectetuer adipiscing elit. Aliquam hendrerit mi posuere lectus.
-Vestibulum enim wisi, viverra nec, fringilla in, laoreet vitae, risus.
-
-> Donec sit amet nisl. Aliquam semper ipsum sit amet velit. Suspendisse
-id sem consectetuer libero luctus adipiscing.
-
-Blockquotes can be nested (i.e. a blockquote-in-a-blockquote) by
-adding additional levels of `>`:
-
-> This is the first level of quoting.
+> **Note:**
 >
-> > This is nested blockquote.
+> For the purpose of this article, I have created a GitHub repository that you can use in following along with this article. So, imagine this is your team’s repository: <https://github.com/busayyyo/designers-guide-to-git>
+
+**1. Clone repository:** The first thing you wanna do is clone your team’s remote repository. It will be on a code repository management software such as GitHub, Bitbucket or Gitlab. Cloning allows you to create a copy of the repository into your local machine. You clone using this command: `git clone <remote repository address>`
+
+In our hypothetical case: `git clone https://github.com/busayyyo/designers-guide-to-git`
+
+**2. Check and maybe switch branch:** Now that you have the cloned files locally, the next step is to check where you are. Think of branches as rooms in your communal living repository house. You want to be in the right room before you decide to paint a wall red.
+
+To do this, first go into the house, i.e the directory where your cloned repository now is. You do this using the `cd <directory-name>` command, in our case: `cd designers-guide-to-git`
+
+Then use the command `git branch`
+
+`git branch #shows you the current repository, i.e the room where you are right now`
+
+Let’s say you find yourself on the master branch… that’s a room you don’t wanna be in while you paint the town red. Get out of there and go to the branch your teammates develop on. We’ll call that ‘develop’. `git checkout develop #switches you to the right branch aka room.`
+
+**3. Pull:** Between cloning, branch switches and the bathroom break you just had, your teammates may have pushed new changes to the develop branch you are on. You want those changes in your local version as well and it’s good practise to always pull them in every chance you get. To do that, all you have to do is:
+
+`git pull origin develop`
+
+**4. Branch:** Now that you have the latest changes in the develop branch, you wanna get cracking, yeah? Well, not so fast. Remember, the develop branch is the communal room what everyone on your team pushes to before going live. It may not be the master branch but it is still sacrosanct and you don’t wanna mess it up. You want to create your own branch. Think of it like creating your own playground, where if you mess up, it’s only your own mess and you have all the time in the world to clean it up. Branching is essential to working collaboratively with git. To create your own branch, use the command `git branch <branch-name>`, in our case:
+
+`git branch playground`
+
+Next thing to do is go into your playground that you just created using the command `git checkout <branch-name>` as in: `git checkout playground`
+
+This new branch is a copy of the branch develop, difference is, you can paint this playground red, if you wish.
+
+> **Tip:**
 >
-> Back to the first level.
+> You could create a new branch and checkout into it with a single command:
+>
+> `git checkout -b <branch-name>`
 
-Blockquotes can contain other Markdown elements, including headers, lists,
-and code blocks:
+**5. Status:** You can check the status of your branch by typing git status. Status shows you the files that have been changed but not yet committed.
 
-> ## This is a header.
-> 
-> 1.   This is the first list item.
-> 2.   This is the second list item.
-> 
-> Here's some example code:
-> 
->     return shell_exec("echo $input | $markdown_script");
+`git status`
 
-Any decent text editor should make email-style quoting easy. For
-example, with BBEdit, you can make a selection and choose Increase
-Quote Level from the Text menu.
+Since we have’t made any concrete changes to the file just yet, you won’t get much of a feedback regarding your files. This is time to give git a break, go into the CSS file you wanna make changes to and do your CSS magic.
 
+**6. Add:** After making changes in a file, you should add it. Adding makes the git begin to track the changes you make to that file. You can can add all changes `git add <filename> or git add .`
 
-### Lists
+A little side note, the . after the add command stands for the directory. So in essence, you are saying add all the changes in this directory.
 
-Markdown supports ordered (numbered) and unordered (bulleted) lists.
+**7. Commit:** Committing is very important. Committing is creating a record of the changes you have just added. You get a short SHA code after commit. This code can be used to roll back changes just in case you decide that was the wrong change or you wanna go back to a previous version. It is essential to add a commit message - which is a short description of the change you just made.
 
-Unordered lists use asterisks, pluses, and hyphens -- interchangably
--- as list markers:
+`git commit -m "changes button color to red"`
 
-*   Red
-*   Green
-*   Blue
+It’s good practise to commit changes as often as you can. You can break your commits into fixes. For example, if your tasks are comprised of 3 major fixes, it’s best to commit after completing each one. That way, you can roll back changes
 
-is equivalent to:
+**8. Log:** Git log shows you the history of all commits in the repository. Every now and then, you may want to see your commits log or the commits your teammates have made. To do that it’s as simple as typing: `git log`
 
-+   Red
-+   Green
-+   Blue
+**9. Push:** Say you’ve made all the usability changes you want to and you’ve added and committed them intermittently and the log says so. Now is the time to push. Pushing registers your changes on the remote repository. So in the tragic case of you losing your computer for example, you will always have access to those changes
 
-and:
+`git push origin playground`
 
--   Red
--   Green
--   Blue
+Now your branch is saved in the remote repository.
 
-Ordered lists use numbers followed by periods:
+**10. Merge:** Merging is an attempt to include your branch changes to the rest of the team’s. It’s like asking your room to be part of the team’s house. Typically, in a team setting, you would make a merge request on Github or the equivalent that your company uses. A merge request is you asking that your playground branch be included as part of the develop branch which is the team’s house.
 
-1.  Bird
-2.  McHale
-3.  Parish
+However, in the extremely unlikely case where you have to handle this yourself, all it involves is going into the team’s working branch i.e develop and then merge yours, using these two commands:
 
-It's important to note that the actual numbers you use to mark the
-list have no effect on the HTML output Markdown produces. The HTML
-Markdown produces from the above list is:
+`git checkout develop` `git merge playground`
 
-If you instead wrote the list in Markdown like this:
+## Conclusion
 
-1.  Bird
-1.  McHale
-1.  Parish
-
-or even:
-
-3. Bird
-1. McHale
-8. Parish
-
-you'd get the exact same HTML output. The point is, if you want to,
-you can use ordinal numbers in your ordered Markdown lists, so that
-the numbers in your source match the numbers in your published HTML.
-But if you want to be lazy, you don't have to.
-
-To make lists look nice, you can wrap items with hanging indents:
-
-*   Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
-    Aliquam hendrerit mi posuere lectus. Vestibulum enim wisi,
-    viverra nec, fringilla in, laoreet vitae, risus.
-*   Donec sit amet nisl. Aliquam semper ipsum sit amet velit.
-    Suspendisse id sem consectetuer libero luctus adipiscing.
-
-But if you want to be lazy, you don't have to:
-
-*   Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
-Aliquam hendrerit mi posuere lectus. Vestibulum enim wisi,
-viverra nec, fringilla in, laoreet vitae, risus.
-*   Donec sit amet nisl. Aliquam semper ipsum sit amet velit.
-Suspendisse id sem consectetuer libero luctus adipiscing.
-
-List items may consist of multiple paragraphs. Each subsequent
-paragraph in a list item must be indented by either 4 spaces
-or one tab:
-
-1.  This is a list item with two paragraphs. Lorem ipsum dolor
-    sit amet, consectetuer adipiscing elit. Aliquam hendrerit
-    mi posuere lectus.
-
-    Vestibulum enim wisi, viverra nec, fringilla in, laoreet
-    vitae, risus. Donec sit amet nisl. Aliquam semper ipsum
-    sit amet velit.
-
-2.  Suspendisse id sem consectetuer libero luctus adipiscing.
-
-It looks nice if you indent every line of the subsequent
-paragraphs, but here again, Markdown will allow you to be
-lazy:
-
-*   This is a list item with two paragraphs.
-
-    This is the second paragraph in the list item. You're
-only required to indent the first line. Lorem ipsum dolor
-sit amet, consectetuer adipiscing elit.
-
-*   Another item in the same list.
-
-To put a blockquote within a list item, the blockquote's `>`
-delimiters need to be indented:
-
-*   A list item with a blockquote:
-
-    > This is a blockquote
-    > inside a list item.
-
-To put a code block within a list item, the code block needs
-to be indented *twice* -- 8 spaces or two tabs:
-
-*   A list item with a code block:
-
-        <code goes here>
-
-### Code Blocks
-
-Pre-formatted code blocks are used for writing about programming or
-markup source code. Rather than forming normal paragraphs, the lines
-of a code block are interpreted literally. Markdown wraps a code block
-in both `<pre>` and `<code>` tags.
-
-To produce a code block in Markdown, simply indent every line of the
-block by at least 4 spaces or 1 tab.
-
-This is a normal paragraph:
-
-    This is a code block.
-
-Here is an example of AppleScript:
-
-    tell application "Foo"
-        beep
-    end tell
-
-A code block continues until it reaches a line that is not indented
-(or the end of the article).
-
-Within a code block, ampersands (`&`) and angle brackets (`<` and `>`)
-are automatically converted into HTML entities. This makes it very
-easy to include example HTML source code using Markdown -- just paste
-it and indent it, and Markdown will handle the hassle of encoding the
-ampersands and angle brackets. For example, this:
-
-    <div class="footer">
-        &copy; 2004 Foo Corporation
-    </div>
-
-Regular Markdown syntax is not processed within code blocks. E.g.,
-asterisks are just literal asterisks within a code block. This means
-it's also easy to use Markdown to write about Markdown's own syntax.
-
-```
-tell application "Foo"
-    beep
-end tell
-```
-
-## Span Elements
-
-### Links
-
-Markdown supports two style of links: *inline* and *reference*.
-
-In both styles, the link text is delimited by [square brackets].
-
-To create an inline link, use a set of regular parentheses immediately
-after the link text's closing square bracket. Inside the parentheses,
-put the URL where you want the link to point, along with an *optional*
-title for the link, surrounded in quotes. For example:
-
-This is [an example](http://example.com/) inline link.
-
-[This link](http://example.net/) has no title attribute.
-
-### Emphasis
-
-Markdown treats asterisks (`*`) and underscores (`_`) as indicators of
-emphasis. Text wrapped with one `*` or `_` will be wrapped with an
-HTML `<em>` tag; double `*`'s or `_`'s will be wrapped with an HTML
-`<strong>` tag. E.g., this input:
-
-*single asterisks*
-
-_single underscores_
-
-**double asterisks**
-
-__double underscores__
-
-### Code
-
-To indicate a span of code, wrap it with backtick quotes (`` ` ``).
-Unlike a pre-formatted code block, a code span indicates code within a
-normal paragraph. For example:
-
-Use the `printf()` function.
+This is by no means the end to git. But this is likely to be your most typical workflow when working with git as a designer. Understanding these 10 commands will help you work effectively with git. But just in case it all seems so tedious with the command line interface, you can also use apps such as the [GitHub desktop app](https://desktop.github.com/) if your team’s repository is hosted on Github. All the best with git!
