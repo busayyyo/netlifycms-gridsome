@@ -5,7 +5,7 @@ published: true
 tags:
   - Musings
   - Book
-cover_image: ../../static/images/uploads/alexandr-podvalny-220262-unsplash.jpg
+cover_image: ""
 description: Man’s search for meaning is a psychological memoir of a prisoner of
   war. It’s an attempt to make sense of the suffering witnessed and endured at
   the concentration camp. But even Dr. Frankl couldn’t accurately do justice to
