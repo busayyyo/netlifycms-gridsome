@@ -1,15 +1,20 @@
 ---
-title: A designer's guide to git
+title: A designer's guide to git 👩‍💻
 date: 2020-01-15T23:00:00.000Z
 published: true
 tags:
   - Helpful
   - Dev
 canonical_url: false
-description: Markdown is intended to be as easy-to-read and easy-to-write as is
-  feasible. Readability, however, is emphasized above all else. A
-  Markdown-formatted document should be publishable as-is, as plain text,
-  without looking like it's been marked up with tags or formatting instructions.
+description: Imagine there’s a part of your company’s web app you’ve recently
+  redesigned to improve usability. It’s an important change, something that will
+  save the customer support folks a few calls, but the developers are busy with
+  the sprint and can’t spare the time. You, on the other hand, can manage the
+  change since you are a CSS guru and a designer who knows the implication if
+  the change doesn’t go out with the next release. You get a go-ahead from the
+  product and engineering managers, who say ‘go make the change!’ How do you
+  make these changes and work collaboratively with your teammates without
+  messing things up for anyone involved?
 ---
 
 
