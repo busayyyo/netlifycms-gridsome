@@ -5,6 +5,7 @@ published: true
 tags:
   - Musings
   - Book
+cover_image: ../../static/images/uploads/alexandr-podvalny-220262-unsplash.jpg
 description: Man’s search for meaning is a psychological memoir of a prisoner of
   war. It’s an attempt to make sense of the suffering witnessed and endured at
   the concentration camp. But even Dr. Frankl couldn’t accurately do justice to
@@ -12,6 +13,8 @@ description: Man’s search for meaning is a psychological memoir of a prisoner 
   unimaginable things that went on at Auschwitz and other internment camps.
 ---
 My disposition to life has always leaned towards that of existential nihilism — a school of thought that proposes that life has no intrinsic meaning or value. However, of recent, I’ve been on a path to find meaning, to make sense of the meaninglessness. This is what led me to Viktor Frankl’s book ‘Man’s search for meaning’.
+
+![Man's search for meaning book cover](../../static/images/uploads/viktor-life.jpeg "Book cover")
 
 ## Dr. Frankl and his approach to meaning
 
