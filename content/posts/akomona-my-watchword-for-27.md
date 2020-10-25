@@ -1,5 +1,5 @@
 ---
-title: "Akomona: my watchword for 27"
+title: "Akomona: my watchword for 27 🥳"
 date: 2020-08-04T11:35:52.222Z
 published: true
 tags:
