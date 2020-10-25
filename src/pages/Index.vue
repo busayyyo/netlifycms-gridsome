@@ -3,7 +3,9 @@
     <!-- Author intro -->
     <Author :show-title="true" />
     
-    <PostTags />
+    <div v-for="edge in $page.posts.edges" :key="edge.node.id" :post="edge.node">
+      TEST
+    </div>
 
     <!-- List posts -->
     <div class="posts">
