@@ -3,8 +3,8 @@
     <!-- Author intro -->
     <Author :show-title="true" />
     
-    <div v-for="edge in $page.posts.edges" :key="edge.node.id" :post="edge.node">
-      <PostTags :post=post />
+    <div v-for="edge in $page.posts.edges">
+      <PostTags :post="edge.node" />
     </div>
 
     <!-- List posts -->
