@@ -2,6 +2,8 @@
   <Layout :show-logo="false">
     <!-- Author intro -->
     <Author :show-title="true" />
+    
+    <PostTags />
 
     <!-- List posts -->
     <div class="posts">
@@ -41,11 +43,13 @@ query {
 <script>
 import Author from '~/components/Author.vue'
 import PostCard from '~/components/PostCard.vue'
+import PostTags from '~/components/PostTags.vue'
 
 export default {
   components: {
     Author,
-    PostCard
+    PostCard,
+    PostTags
   },
   metaInfo: {
     title: 'Home'
