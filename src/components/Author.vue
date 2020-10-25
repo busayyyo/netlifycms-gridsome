@@ -7,7 +7,7 @@
 
 		<p class="author__intro">
 		
-			In pursuit of self and knowledge... also writing is designing with words ;)
+			Writing is designing with words
 		</p>
 
 		<p class="author__links">
