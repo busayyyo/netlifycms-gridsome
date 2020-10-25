@@ -3,7 +3,7 @@ title: "Akomona: my watchword for 27 🥳"
 date: 2020-08-04T11:35:52.222Z
 published: true
 tags:
-  - musing
+  - Musings
 description: 27 feels different from all the previous ages combined. I could
   tell in the way my mother wished me happy birthday, asking what was next now,
   subtly and not so subtly hinting at the next logical choice for women in their
