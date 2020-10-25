@@ -8,11 +8,10 @@ description: I find myself asking ‘what would Jessica Pearson do?’, ‘how w
   Wendy Rhoades handle this?’ a lot more often now. Because it’s becoming
   apparent to me, that like it or not, these shows are a reflection of our
   society - the male-dominated society that we live in, in which power, the real
-  kind of power is willed by men. To have access to this kind of power is to be
-  able to create, and shift the dynamics of the way the world works. And as a
-  woman, to have had any kind of real proximity to this kind of power, is to
-  have broken so many hurdles, worked twice as hard, and screamed or muffled
-  your voice for far too long to be heard.
+  kind of power is willed by men... And as a woman, to have had any kind of real
+  proximity to this kind of power, is to have broken so many hurdles, worked
+  twice as hard, and screamed or muffled your voice for far too long to be
+  heard.
 ---
 I don’t know if it’s on account of age now, but I notice the women in films now more than ever. You know, those women characters in films and TV shows who somehow got relegated to a back story not as important as men’s or only seen in relation to men. I now see them as full characters of their own, badass women navigating a world conjured by men and refactoring into their own fashion.
 
