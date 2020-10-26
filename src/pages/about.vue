@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="content-box>
     <h1>About me</h1>
     <img src="" alt="authors image">
     <p>My name is Busayo - I'm a writer, designer, problem solver</p>
